@@ -1,0 +1,51 @@
+.dashboard{
+    border: 20px;
+    background-color: blue;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+  
+.signup{
+    border-style: solid;
+    border-color: black;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    font-style: normal;
+    color: black;
+}
+
+.login {
+    font-size: 40px;
+    font-style: normal;
+    color: black;
+    border-style: solid;
+    border-color:black;
+    margin-top: -56px;
+    margin-left: 205px;
+    width: 200px;
+    height: 50px;
+}
+.img1{
+    margin-left: -910px;
+    width: 525px;
+    height: 350px; 
+}
+  
+.img2{
+    margin-left: -910px;
+    width: 525px;
+    height: 350px; 
+}
+
+.form{
+
+    text-align: right;
+    margin-right: 650px;
+    margin-top: 250px;
+    
+}
+.gen{
+    text-align: center;
+    margin-right: -615px;
+}
