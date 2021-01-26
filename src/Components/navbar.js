@@ -25,7 +25,7 @@ class navbar extends Component{
             </div>
         )
         return(
-            <button onClick={this.Clicked}> > </button>
+            <button onClick={this.Clicked}> + </button>
         )
     }
 }
