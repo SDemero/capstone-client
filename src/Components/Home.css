@@ -37,3 +37,15 @@
     width: 525px;
     height: 350px; 
 }
+
+.form{
+
+    text-align: right;
+    margin-right: 650px;
+    margin-top: 250px;
+    
+}
+.gen{
+    text-align: center;
+    margin-right: -615px;
+}
