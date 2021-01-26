@@ -27,15 +27,15 @@
     height: 50px;
 }
 .img1{
-    margin-left: -910px;
-    width: 525px;
-    height: 350px; 
+    
+    width: 100%;
+    height: auto; 
 }
   
 .img2{
-    margin-left: -910px;
-    width: 525px;
-    height: 350px; 
+    
+    width: 100%;
+    height: auto; 
 }
 
 .form{
