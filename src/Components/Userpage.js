@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import UpdateProfile from './UpdateProfile';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import axios from 'axios';
 
 class Userpage extends Component{
     constructor(props){
@@ -23,10 +24,9 @@ class Userpage extends Component{
         let metricResult = this.state.weight * 703 / this.state.height;
         this.setState({BMI: metricResult})
     }
-
-    componentDidMount = () => {
+    /*componentDidMount = () => {
         this.setState({caloriesBurned: this.state.caloriesBurned + exercise.calories})
-    }
+    }*/
 
 
     render(){
@@ -39,7 +39,7 @@ class Userpage extends Component{
                 <label>this.state.age</label>
                 <label>this.state.caloriesBurned</label>
                 <label>this.state.BMI</label>
-                <button onClick={this.BMICal}>Find Out Your BMI</button>
+                <Link to="./bmi">here</Link>
                 
                 <Router>
                     <Switch>

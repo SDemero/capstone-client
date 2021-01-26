@@ -44,6 +44,7 @@ handleSubmit=(event)=>{
     event.preventDefault();
     let nam = event.target.name;
     let val = event.target.value;
+    let bmi = this.state.height
     this.setState({[nam]: val});
     this.backend();
     console.log(this.state)
@@ -55,9 +56,12 @@ handleChange=(event)=>{
     console.log(this.state)
 }
 async backend(){
-    await axios.post('http://localhost:8080/api/user',{
-        email: this.state.height,
-        weight: this.state.weight
+    let bmi = (this.state.weight/(this.state.height*this.state.height))
+    console.log("this is the weight "+this.state.weight
+        +"\n this is the height "+this.state.height+"bmi "+bmi);
+    
+    await axios.put('http://localhost:8080/api/user/1',{
+        BMI: bmi
     })
 }
 }
