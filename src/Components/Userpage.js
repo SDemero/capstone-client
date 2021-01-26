@@ -7,12 +7,12 @@ class Userpage extends Component{
         super(props);
 
         this.state = {
-            firstname: "",
-            lastname: "",
-            email: "",
-            weight: "",
+            firstname: "Spongebob",
+            lastname: "Squarepants",
+            email: "sponge@krustykrab.com",
+            weight: 3,
             BMI: "",
-            age: "",
+            age: 25,
             caloriesBurned: 0,
         }
     
@@ -43,8 +43,8 @@ class Userpage extends Component{
                 
                 <Router>
                     <Switch>
-                        <Route path="">Exercise</Route>
-                        <Route path="">Nurtition</Route>
+                        <Route path="/Userpage/Exercise">Exercise</Route>
+                        <Route path="/UserPage/Nutrition">Nutrition</Route>
                     </Switch>
                 </Router>
 
