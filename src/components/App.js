@@ -9,7 +9,11 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import  { AuthProvider } from "../context/AuthContext"
 import Home from "./Home"
+<<<<<<< Updated upstream
 
+=======
+import BMI from "./BMI"
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -23,11 +27,19 @@ function App() {
             <Switch>
               <PrivateRoute exact path="/userDash" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
+<<<<<<< Updated upstream
               <Route path= "/dash" component = {Home}/>
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
               
+=======
+              <Route path="/dash" component={Home}/>
+              <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
+              <Route path="/bmi" component={BMI}/>
+>>>>>>> Stashed changes
             </Switch>
           </AuthProvider>
         </Router>

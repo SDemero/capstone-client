@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Home.css'
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 class BMI extends Component{
     constructor(props){
@@ -14,6 +15,7 @@ class BMI extends Component{
             gender: this.props.gender
         }
     }
+
 
     render(){
         return(
@@ -43,6 +45,7 @@ handleSubmit=(event)=>{
     let nam = event.target.name;
     let val = event.target.value;
     this.setState({[nam]: val});
+    this.backend();
     console.log(this.state)
 }
 handleChange=(event)=>{
@@ -50,6 +53,12 @@ handleChange=(event)=>{
     let val = event.target.value;
     this.setState({[nam]: val});
     console.log(this.state)
+}
+async backend(){
+    await axios.post('http://localhost:8080/api/user',{
+        email: this.state.height,
+        weight: this.state.weight
+    })
 }
 }
 
