@@ -11,6 +11,7 @@ export default function ForgotPassword() {
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e) {
+      
     e.preventDefault()
 
     try {
