@@ -4,4 +4,10 @@
     height: 760px;
     width: 1450px;
     position: fixed ;
+  
+  }
+
+  .container-big{
+    margin: 0;
+    padding: 0;
   }

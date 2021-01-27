@@ -3,6 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../context/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 
+
 export default function Login() {
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -18,7 +19,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
+      history.push("/userdash")
     } catch {
       setError("Failed to log in")
     }
@@ -28,6 +29,7 @@ export default function Login() {
 
   return (
     <>
+    
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
