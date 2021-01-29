@@ -1,0 +1,3 @@
+[submodule "capstone-client"]
+path = 'capstone-client'
+url = https://github.com/SDemero/capstone-client.git
