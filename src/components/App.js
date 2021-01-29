@@ -24,7 +24,7 @@ function App() {
             <Switch>
               <PrivateRoute exact path="/userdash" component={Dashboard} />
               <PrivateRoute path="/updateprofile" component={UpdateProfile} />
-              <Route path="/dash" component={Home}/>
+              <Route exact path="/" component={Home}/>
               <Route path="/bmi" component={BMI}/>
               <Route path="/userpage" component={Userpage}/>
               <Container
