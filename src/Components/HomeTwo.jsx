@@ -4,10 +4,14 @@ import {Link} from 'react-router-dom';
 import {Carousel, Container} from 'react-bootstrap';
 import NavBar from "./NavBar"
 import NavTwo from './NavTwo';
+import {Navbar, Nav ,FormControl,Button,Form} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useAuth } from "../context/AuthContext"
 
 
 
 class HomeTwo extends Component{
+  
    constructor(props){
        super(props)
    }
@@ -15,8 +19,10 @@ class HomeTwo extends Component{
 
   render(){
       return(
+        
       <div className = "container-fluid">
           <NavTwo/>
+         
           <div>
 
           <Carousel>

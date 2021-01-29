@@ -1,6 +1,6 @@
 html *{
     margin: 0;
-    padding: o;
+    padding: 0;
 }
 h3{
 color: rgb(57, 229, 75);
@@ -10,5 +10,12 @@ font-weight: bold;
 p{
    
     color: rgb(57, 229, 75);
+
+
+}
+
+.container-fluid{
+    margin: 0px;
+    padding: 0px;
 
 }

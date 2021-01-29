@@ -28,7 +28,7 @@ function App() {
               <Route exact path="/" component={Home}/>
               <Route path="/bmi" component={BMI}/>
               <Route path="/userpage" component={Userpage}/>
-              <Route path="/userhomepage" component={HomeTwo}/>
+              <PrivateRoute path="/userhomepage" component={HomeTwo}/>
               <Container
                 className="d-flex align-items-center justify-content-center"
                  style={{ minHeight: "100vh" }}>

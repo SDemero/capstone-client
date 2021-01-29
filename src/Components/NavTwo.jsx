@@ -1,31 +1,50 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, {Component,useState} from 'react';
+import {Link, useHistory} from 'react-router-dom';
 import {Navbar, Nav ,FormControl,Button,Form} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useAuth } from "../context/AuthContext";
 
 
-export default class NavTwo extends Component{
+
+export default function NavTwo (){
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+  const history = useHistory()
+  async function handleLogout() {
+    setError("")
+
+    try {
+      await logout()
+      history.push("/login")
+    } catch {
+      setError("Failed to log out")
+    }
+  }
+  
+  
     
-    render(){
+    
         return(
+          
 <>
   
-  <br />
+  <br/>
   <Navbar bg="primary" variant="dark">
     <Navbar.Brand href="/userhomepage">Home</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href ="/">Logout</Nav.Link>
-      <Nav.Link href="/userpage">Dash</Nav.Link>
+      <Nav.Link href="/userdash">Dash</Nav.Link>
       <Nav.Link href="/bmi">Calculate your BMI</Nav.Link>
     </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
+    <Form>
+      <Button variant= "primary" onClick={handleLogout}>
+          Log Out
+        </Button>
     </Form>
   </Navbar>
 
   
 </>
         )
-    }
+    
 }
