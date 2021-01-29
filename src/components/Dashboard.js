@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Card, Button, Alert } from "react-bootstrap"
+import { Card, Button, Alert,Navbar } from "react-bootstrap"
 import { useAuth } from "../context/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import Exercise from './Exercise';
@@ -22,18 +22,22 @@ export default function Dashboard() {
 
   return (
     <>
+  <Navbar>
+  <Navbar.Brand href="/userdash">Home</Navbar.Brand>
+  <Navbar.Toggle />
+  <Navbar.Collapse className="justify-content-end">
+    <Navbar.Text>
+      Signed in as: <a href="/updateprofile">{currentUser.email}</a>
+    </Navbar.Text>
+   
+  </Navbar.Collapse>
+  </Navbar>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <strong>Email:</strong> {currentUser.email}
-          {/* <strong>First Name:</strong>
-          <strong>Last Name:</strong>
-          <strong>Age:</strong>
-          <strong>Weight:</strong>
-          <strong>Height:</strong>
-          <strong>BMI:</strong> */}
-          <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
+          <Link to="/updateprofile" className="btn btn-primary w-100 mt-3">
             Update Profile
           </Link>
         </Card.Body>

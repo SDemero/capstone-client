@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './Home.css'
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-
+import NavBar from "./NavBar"
 class BMI extends Component{
     constructor(props){
         super(props)
@@ -19,7 +19,9 @@ class BMI extends Component{
 
     render(){
         return(
+            
         <div>
+            <NavBar/>
             <div className='form'>
                 <form onSubmit={this.handleSubmit}>
                     <label for='height'>Height:</label>

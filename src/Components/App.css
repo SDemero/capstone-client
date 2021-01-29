@@ -14,4 +14,8 @@
     overflow-y: scroll;
     margin-bottom: 25px; 
   }
-  
+
+  .container-big{
+    margin: 0;
+    padding: 0;
+  }
