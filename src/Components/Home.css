@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .dashboard ul li{
     display: inline-block;
     margin-left: 20px;
@@ -29,39 +30,20 @@ div.media-left{
     font-size: 40px;
     font-style: normal;
     color: black;
+=======
+html *{
+    margin: 0;
+    padding: o;
+>>>>>>> 513865505d281a60bf4b28cead4c6a398cda9de2
+}
+h3{
+color: rgb(57, 229, 75);
+font-weight: bold;
+
+}
+p{
+   
+    color: rgb(57, 229, 75);
+
 }
 
-.login {
-    font-size: 40px;
-    font-style: normal;
-    color: black;
-    border-style: solid;
-    border-color:black;
-    margin-top: -56px;
-    margin-left: 205px;
-    width: 200px;
-    height: 50px;
-}
-.img1{
-    margin-left: -910px;
-    width: 525px;
-    height: 350px; 
-}
-  
-.img2{
-    margin-left: -910px;
-    width: 525px;
-    height: 350px; 
-}
-
-.form{
-
-    text-align: right;
-    margin-right: 650px;
-    margin-top: 250px;
-    
-}
-.gen{
-    text-align: center;
-    margin-right: -615px;
-}

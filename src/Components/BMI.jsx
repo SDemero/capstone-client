@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import './Home.css'
 import {Link} from 'react-router-dom';
-
+import axios from 'axios';
+import NavBar from "./NavBar"
 class BMI extends Component{
     constructor(props){
         super(props)
@@ -15,9 +16,12 @@ class BMI extends Component{
         }
     }
 
+
     render(){
         return(
+            
         <div>
+            <NavBar/>
             <div className='form'>
                 <form onSubmit={this.handleSubmit}>
                     <label for='height'>Height:</label>
@@ -42,7 +46,9 @@ handleSubmit=(event)=>{
     event.preventDefault();
     let nam = event.target.name;
     let val = event.target.value;
+    let bmi = this.state.height
     this.setState({[nam]: val});
+    this.backend();
     console.log(this.state)
 }
 handleChange=(event)=>{
@@ -50,6 +56,15 @@ handleChange=(event)=>{
     let val = event.target.value;
     this.setState({[nam]: val});
     console.log(this.state)
+}
+async backend(){
+    let bmi = (this.state.weight/(this.state.height*this.state.height))
+    console.log("this is the weight "+this.state.weight
+        +"\n this is the height "+this.state.height+"bmi "+bmi);
+    
+    await axios.put('http://localhost:8080/api/user/1',{
+        BMI: bmi
+    })
 }
 }
 
