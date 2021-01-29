@@ -1,10 +1,26 @@
-.dashboard{
-    border: 20px;
-    background-color: blue;
-    margin-top: 10px;
-    margin-left: 0px;
+.dashboard ul li{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-style: solid;
+    
 }
-  
+
+
+.dashboard{
+    background-color: blue;
+}
+
+div.card{
+   height: 100vh;
+    background-color: blueviolet;
+}
+
+div.media-left{
+    height: 40vh;
+}
+
+
 .signup{
     border-style: solid;
     border-color: black;
