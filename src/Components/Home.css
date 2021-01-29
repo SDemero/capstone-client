@@ -1,40 +1,6 @@
-<<<<<<< HEAD
-.dashboard ul li{
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-style: solid;
-    
-}
-
-
-.dashboard{
-    background-color: blue;
-}
-
-div.card{
-   height: 100vh;
-    background-color: blueviolet;
-}
-
-div.media-left{
-    height: 40vh;
-}
-
-
-.signup{
-    border-style: solid;
-    border-color: black;
-    width: 200px;
-    height: 50px;
-    font-size: 40px;
-    font-style: normal;
-    color: black;
-=======
 html *{
     margin: 0;
     padding: o;
->>>>>>> 513865505d281a60bf4b28cead4c6a398cda9de2
 }
 h3{
 color: rgb(57, 229, 75);
@@ -46,4 +12,3 @@ p{
     color: rgb(57, 229, 75);
 
 }
-

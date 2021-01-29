@@ -22,7 +22,7 @@ export default function Dashboard() {
   return (
     <>
   <Navbar>
-  <Navbar.Brand href="/userdash">Home</Navbar.Brand>
+  <Navbar.Brand href="/userhomepage">Home</Navbar.Brand>
   <Navbar.Toggle />
   <Navbar.Collapse className="justify-content-end">
     <Navbar.Text>

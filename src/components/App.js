@@ -9,6 +9,7 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import  { AuthProvider } from "../context/AuthContext"
 import Home from "./Home"
+import HomeTwo from "./HomeTwo"
 import BMI from "./BMI"
 import NavBar from "./NavBar"
 import Userpage from "./Userpage"
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/" component={Home}/>
               <Route path="/bmi" component={BMI}/>
               <Route path="/userpage" component={Userpage}/>
+              <Route path="/userhomepage" component={HomeTwo}/>
               <Container
                 className="d-flex align-items-center justify-content-center"
                  style={{ minHeight: "100vh" }}>
