@@ -3,10 +3,15 @@ import './Home.css';
 import {Link} from 'react-router-dom';
 import {Carousel, Container} from 'react-bootstrap';
 import NavBar from "./NavBar"
+import NavTwo from './NavTwo';
+import {Navbar, Nav ,FormControl,Button,Form} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useAuth } from "../context/AuthContext"
 
 
 
-class Home extends Component{
+class HomeTwo extends Component{
+  
    constructor(props){
        super(props)
    }
@@ -14,8 +19,10 @@ class Home extends Component{
 
   render(){
       return(
+        
       <div className = "container-fluid">
-          <NavBar/>
+          <NavTwo/>
+         
           <div>
 
           <Carousel>
@@ -64,4 +71,4 @@ class Home extends Component{
   }
 }
 
-export default Home;
+export default HomeTwo;

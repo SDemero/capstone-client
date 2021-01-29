@@ -32,25 +32,25 @@ class Userpage extends Component{
     render(){
         return(
             <div>
-                <label>this.state.firstname + this.state.lastname</label>
+                {/* <label>this.state.firstname + this.state.lastname</label>
                 <label>this.state.email</label>
                 <label>this.state.weight</label>
                 <label>this.state.height</label>
                 <label>this.state.age</label>
                 <label>this.state.caloriesBurned</label>
-                <label>this.state.BMI</label>
-                <Link to="./bmi">here</Link>
+                <label>this.state.BMI</label> */}
+                <Link to="./bmi">Calculate BMI Here</Link>
+                <Link to="./userdash">Dashboard</Link>
                 
                 <Router>
                     <Switch>
                         <Route path="/Userpage/Exercise">Exercise</Route>
                         <Route path="/UserPage/Nutrition">Nutrition</Route>
+                        <Route path="/userdash"></Route>
                     </Switch>
                 </Router>
 
-                <UpdateProfile
-                    email={this.state.email}
-                />
+                
                 {/*show as cards*/}
                 {/*import BMI Component}*/}
                 {/*import Exericse Component*/}
