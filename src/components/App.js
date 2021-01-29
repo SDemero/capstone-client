@@ -1,6 +1,6 @@
 import React from "react"
 import Signup from "./Signup"
-import { Container } from "react-bootstrap"
+import  {Container}  from "react-bootstrap"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Dashboard from "./Dashboard"
 import Login from "./Login"
@@ -11,6 +11,8 @@ import  { AuthProvider } from "../context/AuthContext"
 import Home from "./Home"
 import BMI from "./BMI"
 import Userpage from "./Userpage"
+import Exercise from "./Exercise"
+
 
 function App() {
   return (
@@ -24,12 +26,13 @@ function App() {
             <Switch>
               <PrivateRoute exact path="/userDash" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <Route path="/dash" component={Home}/>
+              <Route exact path="/" component={Home}/>
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route path="/bmi" component={BMI}/>
               <Route path="/userpage" component={Userpage}/>
+              <Route path="/exercise" component={Exercise}/>
             </Switch>
           </AuthProvider>
         </Router>

@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import UpdateProfile from './UpdateProfile';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import axios from 'axios';
+import Dashboard from './Dashboard';
+import Exercise from './Exercise';
+import BMI from './BMI';
+
 
 class Userpage extends Component{
     constructor(props){
@@ -14,7 +17,6 @@ class Userpage extends Component{
             weight: 3,
             BMI: "",
             age: 25,
-            caloriesBurned: 0,
         }
     
     this.BMICal = this.BMICal.bind(this);
@@ -24,21 +26,12 @@ class Userpage extends Component{
         let metricResult = this.state.weight * 703 / this.state.height;
         this.setState({BMI: metricResult})
     }
-    /*componentDidMount = () => {
-        this.setState({caloriesBurned: this.state.caloriesBurned + exercise.calories})
-    }*/
 
 
     render(){
         return(
             <div>
-                <label>this.state.firstname + this.state.lastname</label>
-                <label>this.state.email</label>
-                <label>this.state.weight</label>
-                <label>this.state.height</label>
-                <label>this.state.age</label>
-                <label>this.state.caloriesBurned</label>
-                <label>this.state.BMI</label>
+                
                 <Link to="./bmi">here</Link>
                 
                 <Router>
@@ -48,13 +41,28 @@ class Userpage extends Component{
                     </Switch>
                 </Router>
 
-                <UpdateProfile
+                {/* <Dashboard
+                    //showing the user profile
+                    firstname={this.state.firstname}
+                    lastname={this.state.lastname}
                     email={this.state.email}
+                    weight={this.state.weight}
+                    height={this.state.height}
                 />
+
+                <UpdateProfile
+                    //send to update user info
+                    
+                />
+
+                <BMI
+                    weight= {this.state.weight}
+                    height={this.state.height}
+                />
+                */}
+                <Exercise/> 
+
                 {/*show as cards*/}
-                {/*import BMI Component}*/}
-                {/*import Exericse Component*/}
-                {/*import Nutrition Component*/}
                 {/*import Stats Component???}*/}
 
                 {/*import Exericse Component*/}

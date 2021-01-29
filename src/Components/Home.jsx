@@ -4,11 +4,7 @@ import {Link} from 'react-router-dom';
 import "./App.css"
 import {Jumbotron} from 'react-bootstrap';
 
-class Home extends Component{
-   constructor(props){
-       super(props)
-   }
-   
+class Home extends Component{   
 
   render(){
       return(
