@@ -1,5 +1,6 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState, useEffect, cloneElement } from "react"
 import { auth } from "../firebase"
+import axios from "axios"
 
 const AuthContext = React.createContext()
 
@@ -28,12 +29,18 @@ export function AuthProvider({ children }) {
   }
 
   function updateEmail(email) {
+    updateDatabaseEmail(email, currentUser.email)
     return currentUser.updateEmail(email)
   }
 
   function updatePassword(password) {
     return currentUser.updatePassword(password)
   }
+
+  async function updateDatabaseEmail(newEmail, currentEmail){
+    await axios.put(`http://localhost:8080/api/user/${currentEmail}`,{email: newEmail })
+  }
+
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
