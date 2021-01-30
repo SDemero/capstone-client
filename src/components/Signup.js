@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../context/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import axios from 'axios'
 
 export default function Signup() {
   const emailRef = useRef()
@@ -27,6 +28,7 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
+      await axios.post("http://localhost:8080/api/user",{email: emailRef.current.value})
       history.push("/userdash")
     } catch (error){
       console.log(passwordRef.current.value)
