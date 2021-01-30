@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import UpdateProfile from './UpdateProfile';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Dashboard from './Dashboard';
-import Exercise from './Exercise';
-import BMI from './BMI';
+import Exercise from './Exercise/Exercise';
+import BMI from './BMI/BMI';
 
-
+//Profile
 class Userpage extends Component{
     constructor(props){
         super(props);

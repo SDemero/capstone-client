@@ -10,10 +10,10 @@ import UpdateProfile from "./UpdateProfile"
 import  { AuthProvider } from "../context/AuthContext"
 import Home from "./Home"
 import HomeTwo from "./HomeTwo"
-import BMI from "./BMI"
+import BMI from "./BMI/BMI"
 import NavBar from "./NavBar"
 import Userpage from "./Userpage"
-import Exercise from "./Exercise"
+import Exercise from "./Exercise/Exercise"
 
 
 
@@ -32,6 +32,7 @@ function App() {
               <Route path="/userpage" component={Userpage}/>
               <PrivateRoute path="/userhomepage" component={HomeTwo}/>
               <Route path="/exercise" component={Exercise}/>
+              <Route path="/BMI" component={BMI}/>
               <Container
                 className="d-flex align-items-center justify-content-center"
                  style={{ minHeight: "100vh" }}>

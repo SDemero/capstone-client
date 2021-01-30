@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import ExercisePart from './ExercisePart';
-import "./App.css";
+import "../App.css";
 
 class Exercise extends Component {
     constructor(props){
