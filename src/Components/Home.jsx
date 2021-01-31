@@ -20,7 +20,8 @@ class Home extends Component{
       className="d-block w-100"
       src="./img/excersise.jpeg"
       alt="First slide"
-    />
+      height= "854"
+      />
     <Carousel.Caption>
       <h1>Welcome to Invested Fitness</h1>
       <p>Your place to invest your time into your own body</p>
@@ -31,6 +32,7 @@ class Home extends Component{
       className="d-block w-100"
       src="./img/img2.jpeg"
       alt="Second slide"
+      height= "854"
     />
 
     <Carousel.Caption>
@@ -40,9 +42,10 @@ class Home extends Component{
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-1000"
+      className="d-block w-100"
       src="./img/nutrition.jpg"
       alt="Third slide"
+      height= "854"
     />
 
     <Carousel.Caption>

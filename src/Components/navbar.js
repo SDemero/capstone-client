@@ -10,7 +10,7 @@ export default class NavBar extends Component{
     render(){
         return(
 
-  <div className="Homenav">
+  
   <Navbar bg="primary" variant="dark">
     <Navbar.Brand href="/">Home</Navbar.Brand>
     <Nav className="mr-auto">
@@ -23,7 +23,7 @@ export default class NavBar extends Component{
       <Button variant="outline-light">Search</Button>
     </Form> */}
   </Navbar>
-  </div>
+  
   
 
         )
