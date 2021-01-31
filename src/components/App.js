@@ -28,7 +28,6 @@ function App() {
               <PrivateRoute exact path="/userdash" component={Dashboard} />
               <PrivateRoute path="/updateprofile" component={UpdateProfile} />
               <Route exact path="/" component={Home}/>
-              <Route path="/bmi" component={BMI}/>
               <Route path="/userpage" component={Userpage}/>
               <PrivateRoute path="/userhomepage" component={HomeTwo}/>
               <Route path="/exercise" component={Exercise}/>

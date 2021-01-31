@@ -10,7 +10,6 @@ class ExerciseInfo extends Component {
                     <Card.Title>{this.props.name}</Card.Title>
                     <label>Equipment: {this.props.equipment}</label>
                     <label>Description: {this.props.description}</label>
-                    <label>Condition: {this.props.condition}</label>
 
                 </ListGroupItem>
                     

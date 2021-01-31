@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {Card, Form, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BMIRange from './BMIRange'
+import BMIRange from './BMIRange';
+import './BMI.css'
+
 
 class BMI extends Component{
     constructor(props){
@@ -12,43 +14,34 @@ class BMI extends Component{
             weight: 0,
             userBMI: 0,
             flag: false,
-            toggle: false
            }
     }
 
 
     handleSubmit=(event)=>{
         event.preventDefault();
+        if (this.state.flag === false){
         let result = (this.state.weight / this.state.height / this.state.height) * 703;
-        if (result !== NaN){
-            this.setState({buttonflag: true})
-        }
         this.setState({userBMI: result, flag: true});
-        //this.backend();
-    
+        }
     }
+    
+    
     handleChange = (event) => {
+        event.preventDefault();
         this.setState({[event.target.name]: event.target.value})
     }
-    toggle = () => {
-        this.setState({toggle: !this.state.toggle})
+
+    handleReset = () => {
+        this.setState({flag: false})
     }
   
 
-// async backend(){
-//     let bmi = (this.state.weight/(this.state.height*this.state.height))
-//     console.log("this is the weight "+this.state.weight
-//         +"\n this is the height "+this.state.height+"bmi "+bmi);
-    
-//     await axios.put('http://localhost:8080/api/user/1',{
-//         BMI: bmi
-//     })
-// }
-
     render(){
-    
+        
         return(
-            <div className="BMI">
+            <div>
+            <div className="BMI" >
                 <Card bg={'info'} border={"primary"}  text={'white'}>
                     <Card.Header><Card.Title> Find Your BMI </Card.Title></Card.Header>
                     <Card.Body>
@@ -61,10 +54,11 @@ class BMI extends Component{
                                 <Form.Label> Weight (lbs) </Form.Label>
                                 <Form.Control type="number" value={this.state.weight} name="weight" onChange={this.handleChange} placeholder="0" min="0" step=".01"/>
                             </Form.Group>
-                            <Button variant="secondary" onClick={this.handleSubmit} type="submit"> Calculate </Button>
+                            <center><Button variant="secondary" onClick={this.handleSubmit} type="submit"> Calculate </Button></center>
                             {this.state.flag ?
-                            <div>
-                                <Form.Label>BMI: {this.state.userBMI.toFixed(1)}</Form.Label><br/>
+                            <div><br/>
+                                <center><Form.Label>BMI: {this.state.userBMI.toFixed(1)}</Form.Label></center><br/>
+                                <center><Button variant="secondary" onClick={this.handleReset} type="submit"> Reset </Button></center>
                             </div>
                             : null}
                            
@@ -72,6 +66,7 @@ class BMI extends Component{
                             
                     </Card.Body>
                 </Card>
+            </div>
                 <div>
                                 <br/>
                                 {this.state.flag ?

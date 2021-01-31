@@ -1,0 +1,16 @@
+.BMIscrollbar {
+    position: relative;
+    margin-left: 1550px;
+    height: 360px;
+    width: 340px;
+    /* overflow-y: scroll;   */
+    margin-top: -385px; 
+}
+
+.BMI {
+    position: relative;
+    margin-left: 1200px;
+    height: 360px;
+    width: 320px;
+    margin-top: -330px; 
+}

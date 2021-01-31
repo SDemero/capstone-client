@@ -22,7 +22,7 @@ class Home extends Component{
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>Welcome to Invested Fitness</h3>
+      <h1>Welcome to Invested Fitness</h1>
       <p>Your place to invest your time into your own body</p>
     </Carousel.Caption>
   </Carousel.Item>
@@ -34,19 +34,19 @@ class Home extends Component{
     />
 
     <Carousel.Caption>
-      <h3>Excersise</h3>
+      <h1>Excersise</h1>
       <p>Our Goal is to help make sure you know when and how to excersice to maximise your gain</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="d-block w-1000"
       src="./img/nutrition.jpg"
       alt="Third slide"
     />
 
     <Carousel.Caption>
-      <h3>Nutrition</h3>
+      <h1>Nutrition</h1>
       <p>Your body is only as strong as what you feed it. A good diet can do a lot for your body and make it stronger</p>
     </Carousel.Caption>
   </Carousel.Item>
