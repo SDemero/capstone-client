@@ -12,7 +12,6 @@ function ExercisePart(props) {
                                 name={item.name}
                                 equipment={item.equipment}
                                 description={item.description}
-                                condition={item.condition}
                             />
                             )
                     }) : null

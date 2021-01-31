@@ -3,10 +3,11 @@
   padding: 0;
 }
 
-.BMI {
-  margin-left: 300px;
-  margin-top: 200px;
-  height: 360px;
-  width: 340px;
-  
-    }
+.userHome {
+  background-color: lightcyan;
+ }
+
+ .Homenav {
+  position: relative;
+  top: -300px;
+ }

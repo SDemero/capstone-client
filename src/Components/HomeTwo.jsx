@@ -31,6 +31,7 @@ class HomeTwo extends Component{
       className="d-block w-100"
       src="./img/excersise.jpeg"
       alt="First slide"
+      height= "854"
     />
     <Carousel.Caption>
       <h3>Welcome to Invested Fitness</h3>
@@ -42,6 +43,7 @@ class HomeTwo extends Component{
       className="d-block w-100"
       src="./img/img2.jpeg"
       alt="Second slide"
+      height= "854"
     />
 
     <Carousel.Caption>
@@ -54,6 +56,7 @@ class HomeTwo extends Component{
       className="d-block w-100"
       src="./img/nutrition.jpg"
       alt="Third slide"
+      height= "854"
     />
 
     <Carousel.Caption>
