@@ -39,7 +39,7 @@ export default function Dashboard() {
   </Navbar.Collapse>
   </Navbar>
 
-    <div>
+    <div id = "dash">
       <Exercise/>
       <BMI/>
       <Equipment/>
