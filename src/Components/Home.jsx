@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Home.css';
 import {Link} from 'react-router-dom';
 import {Carousel, Container} from 'react-bootstrap';
-import NavBar from "./NavBar"
+import NavBar from "./navbar"
 
 
 
