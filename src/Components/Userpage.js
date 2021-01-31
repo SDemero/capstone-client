@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import UpdateProfile from './UpdateProfile';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import axios from 'axios';
+import Dashboard from './Dashboard';
+import Exercise from './Exercise/Exercise';
+import BMI from './BMI/BMI';
 
+//Profile
 class Userpage extends Component{
     constructor(props){
         super(props);
@@ -14,7 +17,6 @@ class Userpage extends Component{
             weight: 3,
             BMI: "",
             age: 25,
-            caloriesBurned: 0,
         }
     
     this.BMICal = this.BMICal.bind(this);
@@ -24,9 +26,6 @@ class Userpage extends Component{
         let metricResult = this.state.weight * 703 / this.state.height;
         this.setState({BMI: metricResult})
     }
-    /*componentDidMount = () => {
-        this.setState({caloriesBurned: this.state.caloriesBurned + exercise.calories})
-    }*/
 
 
     render(){
@@ -52,9 +51,6 @@ class Userpage extends Component{
 
                 
                 {/*show as cards*/}
-                {/*import BMI Component}*/}
-                {/*import Exericse Component*/}
-                {/*import Nutrition Component*/}
                 {/*import Stats Component???}*/}
 
                 {/*import Exericse Component*/}

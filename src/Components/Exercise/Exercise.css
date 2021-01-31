@@ -1,0 +1,7 @@
+.scrollbar {
+    position: relative;
+    margin-left: 430px;
+    height: 810px;
+    width: 340px;
+    overflow-y: scroll; 
+    top: 30px; } 

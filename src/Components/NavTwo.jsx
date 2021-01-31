@@ -15,7 +15,7 @@ export default function NavTwo (){
 
     try {
       await logout()
-      history.push("/login")
+      history.push("/")
     } catch {
       setError("Failed to log out")
     }
@@ -28,13 +28,13 @@ export default function NavTwo (){
           
 <>
   
-  <br/>
+  
   <Navbar bg="primary" variant="dark">
     <Navbar.Brand href="/userhomepage">Home</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href ="/">Logout</Nav.Link>
+      {/* <Nav.Link href ="/">Logout</Nav.Link> */}
       <Nav.Link href="/userdash">Dash</Nav.Link>
-      <Nav.Link href="/bmi">Calculate your BMI</Nav.Link>
+      {/* <Nav.Link href="/bmi">Calculate your BMI</Nav.Link> */}
     </Nav>
     <Form>
       <Button variant= "primary" onClick={handleLogout}>

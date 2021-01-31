@@ -1,17 +1,16 @@
-html *{
-    margin: 0;
-    padding: 0;
-}
-h3{
-color: rgb(57, 229, 75);
-font-weight: bold;
+    html *{
+        margin: 0;
+        padding: 0;
+    }
+    h1  {
+        position: relative;
+        color: orangered;
+        font-weight: bold;
+        margin-top: -450px;
 
 }
-p{
-   
-    color: rgb(57, 229, 75);
-
-
+p {
+    color: orangered;
 }
 
 .container-fluid{

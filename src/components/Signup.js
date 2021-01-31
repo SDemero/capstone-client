@@ -8,6 +8,10 @@ export default function Signup() {
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
+  // const weightRef = useRef()
+  // const heightRef = useRef()
+  // const nameRef = useRef()
+  // const ageRef = useRef()
   const { signup } = useAuth()
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
@@ -24,9 +28,11 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      await axios.post("http://localhost:8080/api/user",{email: emailRef.current.value})
+      await axios.post("https://ttp-teamhotel-backend.herokuapp.com/api/user",{email: emailRef.current.value.toLowerCase()})
       history.push("/userdash")
-    } catch {
+    } catch (error){
+      console.log(passwordRef.current.value)
+      console.log(error);
       setError("Failed to create an account")
     }
 
@@ -40,6 +46,10 @@ export default function Signup() {
           <h2 className="text-center mb-4">Sign Up</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
+          {/* <Form.Group id="name">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" ref={nameRef} required />
+            </Form.Group> */}
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
@@ -52,6 +62,18 @@ export default function Signup() {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
+             {/* <Form.Group id="age">
+              <Form.Label>Age</Form.Label>
+              <Form.Control type="number" ref={ageRef} required />
+            </Form.Group>
+            <Form.Group id="weight">
+              <Form.Label>Weight (lb)</Form.Label>
+              <Form.Control type="number"step=".01" min="0" ref={weightRef} required />
+            </Form.Group>
+            <Form.Group id="height">
+              <Form.Label>Height (in)</Form.Label>
+              <Form.Control type="number" step=".01" min="0"  ref={heightRef} required />
+            </Form.Group>  */}
             <Button disabled={loading} className="w-100" type="submit">
               Sign Up
             </Button>
