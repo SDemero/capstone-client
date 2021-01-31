@@ -38,7 +38,7 @@ export function AuthProvider({ children }) {
   }
 
   async function updateDatabaseEmail(newEmail, currentEmail){
-    await axios.put(`http://localhost:8080/api/user/${currentEmail}`,{email: newEmail })
+    await axios.put(`https://ttp-teamhotel-backend.herokuapp.com/api/user/${currentEmail}`,{email: newEmail })
   }
 
 

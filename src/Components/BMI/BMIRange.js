@@ -30,7 +30,7 @@ class BMIRange extends Component{
         else if (this.state.bmi.toFixed(1) > 24.9) {
             plan = "Overweight"
         }
-    let url = await axios.get(`http://localhost:8080/api/fitnessPlan/${plan}`)
+    let url = await axios.get(`https://ttp-teamhotel-backend.herokuapp.com/api/fitnessPlan/${plan}`)
         this.setState({
             Risks: url.data[0].risks, 
             Diet: url.data[0].dietOptions, 

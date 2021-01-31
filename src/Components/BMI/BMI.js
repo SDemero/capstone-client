@@ -79,7 +79,7 @@ class BMI extends Component{
                                                 userBMI ={this.state.userBMI}
                                             />
                                             {console.log(this.state.height)}
-                                            <UpdateInfo update={this.state.flag} weight={this.state.weight} height={this.state.height}
+                                            <UpdateInfo  weight={this.state.weight} height={this.state.height}
                                 userBMI = {this.state.userBMI}/></>
                                         }
                                     </div>  

@@ -28,7 +28,7 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      await axios.post("http://localhost:8080/api/user",{email: emailRef.current.value})
+      await axios.post("https://ttp-teamhotel-backend.herokuapp.com/api/user",{email: emailRef.current.value.toLowerCase()})
       history.push("/userdash")
     } catch (error){
       console.log(passwordRef.current.value)
