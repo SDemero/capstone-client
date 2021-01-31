@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {Card, Form, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BMIRange from './BMIRange'
+import axios from 'axios';
+import UpdateInfo from './updateInfo'
 
 class BMI extends Component{
     constructor(props){
@@ -11,10 +13,12 @@ class BMI extends Component{
             height: 0,
             weight: 0,
             userBMI: 0,
+            weightarr:[1,3],
             flag: false,
             toggle: false
            }
     }
+
 
 
     handleSubmit=(event)=>{
@@ -35,15 +39,7 @@ class BMI extends Component{
     }
   
 
-// async backend(){
-//     let bmi = (this.state.weight/(this.state.height*this.state.height))
-//     console.log("this is the weight "+this.state.weight
-//         +"\n this is the height "+this.state.height+"bmi "+bmi);
-    
-//     await axios.put('http://localhost:8080/api/user/1',{
-//         BMI: bmi
-//     })
-// }
+
 
     render(){
     
@@ -65,6 +61,7 @@ class BMI extends Component{
                             {this.state.flag ?
                             <div>
                                 <Form.Label>BMI: {this.state.userBMI.toFixed(1)}</Form.Label><br/>
+                                
                             </div>
                             : null}
                            
@@ -78,9 +75,12 @@ class BMI extends Component{
                                     <div>
                                     
                                         {isNaN(this.state.userBMI) ? null:
-                                            <BMIRange 
+                                            <><BMIRange 
                                                 userBMI ={this.state.userBMI}
-                                            /> 
+                                            />
+                                            {console.log(this.state.height)}
+                                            <UpdateInfo update={this.state.flag} weight={this.state.weight} height={this.state.height}
+                                userBMI = {this.state.userBMI}/></>
                                         }
                                     </div>  
                                : null}
