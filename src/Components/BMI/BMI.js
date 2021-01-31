@@ -3,7 +3,7 @@ import {Card, Form, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BMIRange from './BMIRange';
 import './BMI.css'
-
+import UpdateInfo from './updateInfo'
 
 class BMI extends Component{
     constructor(props){
@@ -13,9 +13,11 @@ class BMI extends Component{
             height: 0,
             weight: 0,
             userBMI: 0,
+            weightarr:[1,3],
             flag: false,
            }
     }
+
 
 
     handleSubmit=(event)=>{
@@ -73,9 +75,12 @@ class BMI extends Component{
                                     <div>
                                     
                                         {isNaN(this.state.userBMI) ? null:
-                                            <BMIRange 
+                                            <><BMIRange 
                                                 userBMI ={this.state.userBMI}
-                                            /> 
+                                            />
+                                            {console.log(this.state.height)}
+                                            <UpdateInfo update={this.state.flag} weight={this.state.weight} height={this.state.height}
+                                userBMI = {this.state.userBMI}/></>
                                         }
                                     </div>  
                                : null}
