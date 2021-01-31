@@ -1,0 +1,7 @@
+.Equipmentscrollbar {
+    position: absolute;
+    margin-left: 820px;
+    height: 810px;
+    width: 340px;
+    overflow-y: scroll; 
+    top: 85px; } 

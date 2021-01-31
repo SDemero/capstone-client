@@ -14,6 +14,7 @@ import BMI from "./BMI/BMI"
 import NavBar from "./NavBar"
 import Userpage from "./Userpage"
 import Exercise from "./Exercise/Exercise"
+import Equipment from "./Equipment/Equipment"
 
 
 
@@ -32,6 +33,7 @@ function App() {
               <PrivateRoute path="/userhomepage" component={HomeTwo}/>
               <Route path="/exercise" component={Exercise}/>
               <Route path="/BMI" component={BMI}/>
+              <Route path="equipment" component={Equipment}/>
               <Container
                 className="d-flex align-items-center justify-content-center"
                  style={{ minHeight: "100vh" }}>

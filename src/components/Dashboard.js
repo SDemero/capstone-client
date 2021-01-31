@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import Exercise from './Exercise/Exercise';
 import BMI from './BMI/BMI';
+import Equipment from './Equipment/Equipment';
 import "./App.css";
 
 export default function Dashboard() {
@@ -41,9 +42,10 @@ export default function Dashboard() {
     <div>
       <Exercise/>
       <BMI/>
-
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <Equipment/>
+      
+      <br/>
+      
     </div>
    
     </div>
