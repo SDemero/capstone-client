@@ -9,7 +9,7 @@ Website: https://ttp-capstone-investedfitness.netlify.app/
 [ReactJS](https://reactjs.org/)\
 [Bootstrap](https://getbootstrap.com/)\
 [Axios](https://github.com/axios/axios)\
-[Firebase](https://firebase.google.com/)\
+[Firebase](https://firebase.google.com/)
 
 ## Backend
 **Repository**: https://github.com/Daniel-Ho986/CAPSTONE-Backend
